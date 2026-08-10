@@ -9,4 +9,6 @@ export type SocialSSOState = {
   action?: SocialSSOSignInUpActionType;
   locale?: keyof typeof APP_LOCALES;
   returnToPath?: string;
+  // 'true' when the request originates from the Flutter mobile app
+  mobile?: string;
 };

@@ -49,6 +49,7 @@ export class GoogleAuthController {
       await this.authService.signInUpWithSocialSSO(
         req.user,
         AuthProviderEnum.Google,
+        req.user.mobile === true,
       ),
     );
   }

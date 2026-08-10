@@ -953,8 +953,11 @@ export class AuthService {
       billingCheckoutSessionState,
       locale,
       returnToPath,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ..._rest
     }: MicrosoftRequest['user'] | GoogleRequest['user'],
     authProvider: AuthProviderEnum.Google | AuthProviderEnum.Microsoft,
+    mobile = false,
   ): Promise<string> {
     const email = rawEmail.toLowerCase();
 
@@ -1062,6 +1065,11 @@ export class AuthService {
         workspace.id,
         authProvider,
       );
+
+      // Mobile app receives the token via a custom URL scheme instead of the web frontend
+      if (mobile) {
+        return `idda-field://auth?loginToken=${loginToken.token}`;
+      }
 
       return this.computeRedirectURI({
         loginToken: loginToken.token,
