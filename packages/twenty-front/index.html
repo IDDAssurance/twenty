@@ -3,31 +3,39 @@
   <head>
     <meta charset="UTF-8" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/images/icons/android/android-launchericon-48-48.png"
-      data-rh="true"
-    />
-    <link rel="apple-touch-icon" href="/images/icons/ios/192.png" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
 
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="A modern open-source CRM" />
+    <meta
+      name="description"
+      content="IDDA CRM - Lead & Practice Management Platform"
+    />
+
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/twentyhq/twenty/main/docs/static/img/social-card.png"
+      content="/images/social-card.png"
     />
-    <meta property="og:description" content="A modern open-source CRM" />
-    <meta property="og:title" content="Twenty" />
+    <meta
+      property="og:description"
+      content="IDDA CRM - Lead & Practice Management Platform"
+    />
+    <meta property="og:title" content="IDDA CRM" />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
-      content="https://raw.githubusercontent.com/twentyhq/twenty/main/docs/static/img/social-card.png"
+      content="/images/social-card.png"
     />
+    <meta
+      name="twitter:description"
+      content="IDDA CRM - Lead & Practice Management Platform"
+    />
+    <meta name="twitter:title" content="IDDA CRM" />
 
-    <meta name="twitter:description" content="A modern open-source CRM" />
-    <meta name="twitter:title" content="Twenty" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
@@ -37,7 +45,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&display=swap"
     />
 
-    <title>Twenty</title>
+    <title>IDDA CRM</title>
+
     <!-- BEGIN: Twenty Config -->
     <script id="twenty-env-config">
       window._env_ = {
@@ -47,9 +56,12 @@
     <!-- END: Twenty Config -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script type="module">
       const disableInputAutoZoom = () => {
-        const viewportMetadata = document.querySelector('meta[name=viewport]');
+        const viewportMetadata = document.querySelector(
+          'meta[name=viewport]',
+        );
 
         if (viewportMetadata !== null) {
           viewportMetadata.setAttribute(
@@ -64,11 +76,10 @@
         disableInputAutoZoom();
       }
     </script>
+
     <style>
       :root {
-        /* THEME_DARK.background.tertiary */
         --theme-dark-background-tertiary: #1d1d1d;
-        /* THEME_LIGHT.background.tertiary */
         --theme-light-background-tertiary: #f1f1f1;
       }
 
@@ -87,6 +98,7 @@
       }
     </style>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
